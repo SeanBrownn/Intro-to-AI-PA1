@@ -1,0 +1,27 @@
+For a given command, the command and its arguments are on the same line (separated by spaces as
+appropriate).
+
+setState 712 68b 354
+printState
+moveUp (valid move up)
+moveDown (valid move down)
+moveLeft (valid move left)
+moveRight (valid move right)
+setState b12 687 354
+printState
+moveUp (invalid move up - shouldn't do anything)
+moveLeft (invalid move left - shouldn't do anything)
+setState 712 684 35b
+printState
+moveDown (invalid move down - shouldn't do anything)
+moveRight (invalid move right - shouldn't do anything)
+randomize 7
+solveAStar h1 3 (shouldn't be solvable)
+solveAStar h1 10000 (should be solvable)
+solveAStar h2 3 (shouldn't be solvable)
+solveAStar h2 10000 (should be solvable)
+solveBeam 1 3 (shouldn't be solvable)
+solveBeam 8 10000 (should be solvable)
+randomize 20
+solveAStar h2 1000
+solveBeam 8 1000 (shows that beam search sometimes finds solutions of different length than A Star)
